@@ -16,48 +16,47 @@ This project is developed based on [pytorch-CycleGAN-and-pix2pix](https://github
 
 ## Project Structure
 GEN-AI-CBCT/
-├── datasets/ # CBCT datasets
-│ └── your_dataset_name/
-│ ├── testA/ # Low-dose CBCT images (.jpg)
-│ └── testB/ # High-dose CBCT images (.jpg)
-├── scripts/
-│ └── test_cyclegan.sh # Inference script
-├── models/ # Model definitions
-├── training/ # Training scripts
-├── checkpoint/ # pre-trained models
-├── utils/ # Utility functions
-├── options/ # Configuration options
-└── results/ # Generated results
+- ├── datasets/ # CBCT datasets
+- │ └── your_dataset_name/
+- │ ├── testA/ # Low-dose CBCT images (.jpg)
+- │ └── testB/ # High-dose CBCT images (.jpg)
+- ├── scripts/
+- │ └── test_cyclegan.sh # Inference script
+- ├── models/ # Model definitions
+- ├── training/ # Training scripts
+- ├── checkpoint/ # pre-trained models
+- ├── utils/ # Utility functions
+- ├── options/ # Configuration options
+- └── results/ # Generated results
 ## Environment Requirements
 
-```bash
-# Base environment
-pip install torch torchvision torchaudio
-pip install numpy scipy matplotlib pillow
-pip install opencv-python scikit-image
-pip install nibabel  # For medical image processing
-pip install tensorboard
+## Base environment
+- pip install torch torchvision torchaudio
+- pip install numpy scipy matplotlib pillow
+- pip install opencv-python scikit-image
+- pip install nibabel  # For medical image processing
+- pip install tensorboard
 
-# Or install from requirements.txt
-pip install -r requirements.txt
+## Or install from requirements.txt
+- pip install -r requirements.txt
 
 
-Quick Start
+## Quick Start
 1. Prepare Test Data
-# Create directory structure
-mkdir -p ./datasets/your_dataset_name/testA  # Low-dose CBCT
-mkdir -p ./datasets/your_dataset_name/testB  # High-dose CBCT
+- Create directory structure
+  mkdir -p ./datasets/your_dataset_name/testA  # Low-dose CBCT
 
-# Save your test data as JPG format in:
-# ./datasets/your_dataset_name/testA/  # Low-dose images (.jpg)
-# ./datasets/your_dataset_name/testB/  # High-dose images (.jpg)
-2. Run Inference
-# Modify test_cyclegan.sh with your dataset name and model name
-# Change: --dataroot ./datasets/your_dataset_name --name Axial_Low_High_CBCT
+2. Save your test data as JPG format in:
+- ./datasets/your_dataset_name/testA/  # Low-dose images (.jpg)
 
-# Execute inference
-bash ./scripts/test_cyclegan.sh
-Citation
+3. Run Inference
+- Modify test_cyclegan.sh with your dataset name and model name
+- Change: --dataroot ./datasets/your_dataset_name --name Axial_Low_High_CBCT
+
+4. Execute inference
+- bash ./scripts/test_cyclegan.sh
+
+## Citation
 If this project helps your research, please cite:
 @article{yourpaper2024,
   title={Impact of generative AI-enhanced low-dose CBCT on diagnosis and treatment planning for impacted mandibular third molars},
@@ -65,5 +64,6 @@ If this project helps your research, please cite:
   journal={To be published},
   year={2025}
 }
-License and Acknowledgement
-This project follows the license of pytorch-CycleGAN-and-pix2pix. See LICENSE file for details.
+
+## License and Acknowledgement
+Thanks for the project of  [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix). 
